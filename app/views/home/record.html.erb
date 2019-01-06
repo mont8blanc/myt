@@ -1,0 +1,28 @@
+<div class="header">
+  <h1>マイ トラブルシューティング<br>
+    <h2>どうしても変えたい自分の習慣<br>
+      自分専用の取り扱い説明書の作りかた<br></h2>
+    </h1>
+  </div>
+  <!-- <form action=""> -->
+  <div class="item">
+    <label class="label" for="goal" name="goal">最終目標</label><label class="example">(例)夏までに2kg痩せる！
+    </label><br>
+    <input id="goal" type="text"><br>
+    <%= form_tag("records/create")do %>
+    <textarea></textarea>
+    <input type="submit" value="編集">
+    <% end %>
+  </div>
+  <div class="item">
+    <label class="label" for="month" name="month_goal">今月の目標</label><label class="example">(例)テキスト
+    </label><br>
+    <input id="month" type="text"><br>
+    <input id="month" type="text"><br>
+    <input id="month" type="text"><br>
+  </div><br>
+  <div class="item">
+    <label class="label" for="manual" name="goal">自分専用の対策</label><label class="example">(例)テキスト
+    </label><br>
+    <input id="manual" type="my_manual"><br>
+  </div>

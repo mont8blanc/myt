@@ -1,0 +1,105 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @links.each do |link| %>
+      <tr>
+        <td><%= link_to link.title, link %></td>
+        <td><%= link_to '編集', edit_link_path(link) %></td>
+        <td><%= link_to '×', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+
+    <% @links.each do |link| %>
+      <tr>
+        <td><%= link_to "" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @links.each do |link| %>
+      <tr>
+        <td><%= link_to link.title, link %></td>
+        <td><%= link_to '編集', edit_link_path(link) %></td>
+        <td><%= link_to '×', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+
+    <% @links.each do |link| %>
+      <tr>
+        <td><%= link_to "" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @links.each do |link| %>
+      <tr>
+        <td rowspan="2"><%= link_to link.title, link %></td>
+        <td rowspan="2"><%= link_to '編集', edit_link_path(link) %></td>
+        <td rowspan="2"><%= link_to '×', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% 31.times do |t| %>
+          <td><%= t + 1 %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <%# 31.times do |t|
+          <td>
+            link.day[t]
+            <%# case num %>
+            <%# <% when 0 %>
+              <%#= flag %>
+            <%# when 1 %>
+              <%#= "○" %>
+            <%# when 2 %>
+              <%#= "△" %>
+            <%# when 3 %>
+              <%#= "×" %>
+            <%# end %>
+          </td>
+        <%# end %>
+      </tr>
+    <% end %>
+
+    <% @links.each do |link| %>
+      <tr>
+        <td><%= link_to "" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+
+</table>
+
+<br>
+
+<%= link_to 'New Link', new_link_path %>
