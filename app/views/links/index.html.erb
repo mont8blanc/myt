@@ -65,7 +65,7 @@
     <% @links.each do |link| %>
       <tr>
         <td rowspan="2"><%= link_to link.title, link %></td>
-        <td rowspan="2"><%= link_to '編集', edit_link_path(link) %></td>
+        <td rowspan="2"><%= link_to '編', edit_link_path(link) %></td>
         <td rowspan="2"><%= link_to '×', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% 31.times do |t| %>
           <td><%= t + 1 %></td>
